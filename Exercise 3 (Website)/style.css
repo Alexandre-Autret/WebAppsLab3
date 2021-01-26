@@ -1,0 +1,128 @@
+@font-face {
+	font-family: outrun;
+	src: url('of.otf');
+}
+
+body {
+    margin-top: 8vh;
+    color: #DDDDFF;
+    font-family: "outrun", "Arial", cursive;
+    background-color: #000000; 
+    text-align: center;
+    list-style-position: inside;
+    background-image: url('ressources/background3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width:100%;
+	text-shadow: 2px 2px #000000;
+	overflow: hidden;
+}
+
+h1 {
+	color: #CC5599;
+	font-size: 4vh;
+}
+
+h2 {
+	color: #EEFF00;
+	font-size: 3vh;
+}
+
+h3 {
+	margin-top: 4vh;
+	color: #CC5599;
+	line-height: 0px;
+}
+
+strong {
+	font-family: "outrun", "Arial", cursive;
+	color: #EEFF00;
+}
+
+hr {
+	border-color: #EEFF00;
+	width: 10000px;
+}
+
+a {
+	color: #EEFF00;
+}
+
+div {
+	word-spacing:5vh;
+	text-align: center;
+	position: fixed;
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -10%);
+    margin: 0 auto;
+	white-space: nowrap;
+}
+
+
+ul {
+	list-style: none;
+}
+
+ul li::before{
+	content: ">   ";
+	color: #EEFF00;
+}
+
+.basicimg {
+	margin-top: 4vh;
+	border-color: #CC5599;
+	border-width: 4px;
+	border-style: solid;
+	max-width:50%;
+}
+
+button{
+	background: unset !important;
+	border: unset !important;
+	outline: unset !important;
+	cursor: pointer;
+	font-family: "outrun", "Arial", cursive;
+	color: #DDDDFF;
+	font-size: 2.5vh;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-shadow: 2px 2px #000000;
+}
+
+li {
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#jsList{
+	margin-top: 44vh;
+	word-spacing: 5px;
+	font-size: 2.5vh;
+}
+
+#jsList2{
+	margin-top: 36vh;
+	word-spacing: 5px;
+	font-size: 2.5vh;
+	font-size: 1.75vw;
+}
+
+#faqHeader{
+	margin-top: 8vh;
+}
+
+#nav{
+	white-space: nowrap;
+}
+
+p{
+	font-size: 3vh;
+}
+
+#navP{	
+	font-size: 2vh;
+}

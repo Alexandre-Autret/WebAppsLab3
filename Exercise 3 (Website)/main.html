@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'/>
+    <title>Homepage</title>
+  </head>
+  
+  <body>
+    <h1>What is this website?</h1>
+    <p>Just a simple test for HTML, CSS and JS</p>
+    <h2 id="header2">Functions // for this page only:</h2>
+	
+	<div id="jsList">
+		<ul id="functions">
+			<li id="elem1"><button type="button" onclick="changeBG()" id="b1">Choose dynamic background</button></li>
+			<li><button type="button" onclick="changeBG2()" id="b2">Choose default background</button></li>
+			<li><button type="button" onclick="removeButton()" id="b3">Remove the first button</button></li>
+			<li><button type="button" onclick="buttonToUpper()" id="b4">Make all buttons uppercase</button></li>
+			<li><button type="button" onclick="buttonToLower()" id="b5">Make all buttons lowercase</button></li>
+			<li><button type="button" onclick="writeHelloWorld()" id="b6">Write <strong>"HELLO WORLD!"</strong></button></li>
+			<li><button type="button" onclick="playAudio()" id="b7">Play/pause audio // copyright-free!</button></li>
+			<li><button type="button" onmouseover="hideAll()" onmouseout="showAll()" id="b8">Hover over this text to hide all buttons</button></li>
+		</ul>
+	</div>
+	
+	<audio src='ressources/bg_audio.mp3' type='audio/mpeg' id="audioTag">Error while loading audio</audio>
+	
+	<script>
+		function changeBG() {
+			document.body.style.backgroundImage = "url('ressources/background.gif')";
+		}
+		function changeBG2() {
+			document.body.style.backgroundImage = "url('ressources/background3.jpg')";
+		}
+		function removeButton() {
+			var elem = document.getElementById("elem1");
+			elem.parentNode.removeChild(elem);
+			return false;
+		}
+		function buttonToUpper() {
+			var i;
+			var listLength = document.getElementsByTagName("li").length;
+			for (i = 0; i < listLength; i++){
+				var elem = document.getElementById("b" + (i + 1));
+				if (elem == null){
+					listLength += 1;
+				}else{
+					elem.textContent = elem.textContent.toUpperCase();
+				}
+			}
+		}
+		function buttonToLower() {
+			var i;
+			var listLength = document.getElementsByTagName("li").length;
+			for (i = 0; i < listLength; i++){
+				var elem = document.getElementById("b" + (i + 1));
+				if (elem == null){
+					listLength += 1;
+				}else{
+					elem.textContent = elem.textContent.toLowerCase();
+				}
+			}
+		}
+		function writeHelloWorld(){
+			document.getElementById("header2").innerHTML = "<strong>HELLO WORLD!</strong>";
+		}
+		function playAudio(){
+			var audio = document.getElementById("audioTag");
+			audio.volume = 0.2;
+			if (audio.paused){
+				audio.play();
+				clicked = false;
+			}else{
+				audio.pause();
+			}
+		}
+		function hideAll(){
+			var i;
+			var listLength = document.getElementsByTagName("li").length;
+			for (i = 0; i < listLength; i++){
+				var elem = document.getElementById("b" + (i + 1));
+				if (elem == null){
+					listLength += 1;
+				}else{
+					elem.style.visibility = "hidden";
+				}
+			}
+		}
+		function showAll(){
+			var i;
+			var listLength = document.getElementsByTagName("li").length;
+			for (i = 0; i < listLength; i++){
+				var elem = document.getElementById("b" + (i + 1));
+				if (elem == null){
+					listLength += 1;
+				}else{
+					elem.style.visibility = "visible";
+				}
+			}
+		}
+	</script>
+	
+	<div class="nav">
+		<p id="navP">Browse
+			<a href='main.html'>Home</a>
+			<a href='faq.html'>FAQ</a>
+			<a href='gallery.html'>Gallery</a>
+		</p>
+	</div>
+  </body>
+</html>
