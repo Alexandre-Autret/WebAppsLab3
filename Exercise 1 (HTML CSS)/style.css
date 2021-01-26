@@ -1,0 +1,29 @@
+body{
+	font-size: 16px;
+	text-align: center;
+	font-family: "Arial", "cursive";
+	text-align: center;
+}
+
+div{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #EE88BB;
+	background-color: #FFEEFF;
+	width: 420px;
+	padding-right: 8px;
+	padding-left: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+h1{
+	font-size: 36px;
+}
+
+ul{
+	list-style-type: square;
+	list-style-position: inside;
+}
